@@ -51,14 +51,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (!isStarted)return false;
-
                 seekToTv.setVisibility(View.VISIBLE);
                 seekToTv.setX(event.getX()-30);
 
-                float progress=seekBar.getProgress()/(float)100;
-                int dura=lxqBinder.getDura()/1000;
-                float position=progress*100*dura*1000;
-                Log.e("posi",position+"");
+//                float progress=seekBar.getProgress()/(float)100;
+//                int dura=lxqBinder.getDura()/1000;
+//                float position=progress*100*dura*1000;
+//                Log.e("posi",position+"");
+
 //                int seekMinute=position/1000/60;
 //                Log.e("seeMi",seekMinute+"");
 //                int seekSeconds=position/1000-seekMinute*60;
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                     lxqBinder.pause();
                     playerBtn.setImageResource(R.mipmap.ic_play_circle_filled_white_black_48dp);
                 }
-
+                Log.e("answer","test");
             }
         });
         //长按停止
